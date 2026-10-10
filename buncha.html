@@ -3,46 +3,246 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bun Cha - Essence of Vietnamese Cuisine</title>
+  <meta name="description" content="Discover Hanoi's Bún Chả: grilled pork, rice noodles, and fresh herbs. Explore its story, Obama's famous visit, and a recipe to try at home.">
+  <title>Bún Chả - Essence of Vietnamese Cuisine</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .buncha-page { max-width: 1140px; }
+    .buncha-page [id] { scroll-margin-top: 110px; }
+    .buncha-page .eyebrow {
+      color: var(--primary-dark);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .buncha-page h1 { font-size: clamp(3rem, 7vw, 5rem); letter-spacing: -0.04em; }
+    .buncha-page h2 { letter-spacing: -0.025em; }
+    .buncha-page .hero-photo { width: 100%; height: auto; border-radius: 20px; }
+    .buncha-page .story-box { background: #fef3e2; border-left: 4px solid var(--secondary-color); }
+    .buncha-page .recipe-panel { background: var(--bg-light); border-radius: 16px; }
+    .buncha-page .ingredient-list li { margin-bottom: 0.5rem; }
+    .buncha-page .recipe-steps { padding-left: 1.5rem; }
+    .buncha-page .recipe-steps > li { padding-left: 0.5rem; margin-bottom: 1.5rem; }
+    .buncha-page .recipe-steps > li::marker { color: var(--primary-dark); font-weight: 700; }
+    .buncha-page .step-number { color: var(--primary-dark); font-size: 1.5rem; font-weight: 700; }
+    .buncha-page a:not(.btn) { color: var(--primary-dark); text-underline-offset: 3px; }
+    .buncha-page a:focus-visible { outline: 3px solid var(--primary-dark); outline-offset: 4px; }
+    @media (max-width: 575.98px) {
+      .navbar-brand { font-size: 1rem; letter-spacing: 0; }
+      .buncha-page { padding-right: 24px; padding-left: 24px; }
+    }
+  </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3">
-    <div class="container px-4">
-      <a class="navbar-brand fw-bold" href="index.html">VIETNAMESE CUISINE</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3">
+  <div class="container px-4">
+    <a class="navbar-brand fw-bold" href="index.html">VIETNAMESE CUISINE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
     </div>
+  </div>
+</nav>
+
+<main class="container my-5 flex-grow-1 buncha-page" id="main-content">
+  <nav aria-label="Breadcrumb" class="mb-4">
+    <ol class="breadcrumb small">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="index.html#foodGrid">Traditional dishes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Bún Chả</li>
+    </ol>
   </nav>
 
-  <main class="container my-5 flex-grow-1">
-    
-  </main>
-
-  <footer class="py-4 text-center mt-auto">
-    <div class="container">
-      <p class="mb-1 fw-bold">Vietnamese Cuisine Project &copy; 2026</p>
-      <small class="text-white-50">Website crafted by Group 5 - HTML5, CSS3, JavaScript & Bootstrap 5</small>
+  <header class="row align-items-center g-4 g-lg-5 mb-5">
+    <div class="col-lg-5">
+      <span class="badge-region d-inline-block mb-3">Hanoi · Northern Vietnam</span>
+      <h1 class="fw-bold mb-2" lang="vi">Bún Chả</h1>
+      <p class="fs-4 mb-3">A taste of Hanoi, fresh off the grill.</p>
+      <p class="text-muted mb-4">Smoky pork, delicate rice noodles, crisp herbs, and a sweet-tangy dipping sauce. Bún Chả brings contrasting flavors and textures together in one wonderfully balanced meal.</p>
+      <div class="d-flex flex-wrap gap-3 align-items-center">
+        <a class="btn btn-primary" href="#recipe">Try the recipe</a>
+        <a href="#famous-visit">The Obama connection</a>
+      </div>
     </div>
-  </footer>
+    <div class="col-lg-7">
+      <figure class="mb-0">
+        <img src="images/bun_cha.jpg" class="hero-photo" width="1400" height="1051" fetchpriority="high" alt="Grilled pork patties and pork slices in dipping sauce, served with rice vermicelli and a platter of fresh herbs">
+        <figcaption class="small text-muted mt-2">Grilled pork, noodles, and greens: the essentials of a Bún Chả meal.</figcaption>
+      </figure>
+    </div>
+  </header>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
+  <section aria-labelledby="introduction-heading" class="mb-5">
+    <p class="eyebrow mb-2">The dish at a glance</p>
+    <h2 class="fw-bold mb-3" id="introduction-heading">A Hanoi lunchtime favorite</h2>
+    <p class="text-muted">Bún Chả is closely associated with Hanoi's street-food culture. Pork patties (<span lang="vi">chả viên</span>) and slices of pork (<span lang="vi">chả miếng</span>) are grilled and served with rice vermicelli (<span lang="vi">bún</span>). A bowl of diluted fish-sauce dressing brings sweetness, acidity, and savory depth, while pickled vegetables and fresh herbs keep each bite bright.</p>
+    <div class="row g-3 mt-1">
+      <div class="col-md-4">
+        <div class="p-4 border rounded-3 h-100">
+          <h3 class="h5 fw-bold">Smoky &amp; savory</h3>
+          <p class="text-muted mb-0">Charcoal grilling gives the marinated pork its fragrant aroma and caramelized edges.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded-3 h-100">
+          <h3 class="h5 fw-bold">Fresh &amp; fragrant</h3>
+          <p class="text-muted mb-0">Soft rice noodles meet lettuce, mint, coriander, and other fresh herbs.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded-3 h-100">
+          <h3 class="h5 fw-bold">Sweet &amp; tangy</h3>
+          <p class="text-muted mb-0">Fish sauce, sugar, and a little acidity form the dipping sauce that ties the meal together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story-box rounded-3 p-4 p-lg-5 mb-5" id="famous-visit" aria-labelledby="visit-heading">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-4">
+        <p class="eyebrow mb-2">Hanoi · May 23, 2016</p>
+        <h2 class="fw-bold mb-0" id="visit-heading">A familiar dish.<br>A famous guest.</h2>
+      </div>
+      <div class="col-lg-8">
+        <p>During his 2016 visit to Vietnam, then-U.S. President <strong>Barack Obama</strong> shared a meal with chef and television host <strong>Anthony Bourdain</strong> at <strong lang="vi">Bún Chả Hương Liên</strong> in Hanoi. Their dinner was filmed for Bourdain's show <cite>Parts Unknown</cite>, putting a spotlight on this everyday Hanoi favorite.</p>
+        <p class="mb-0 small">Read about the visit: <a href="https://time.com/4345465/barack-obama-anthony-bourdain-vietnam-food-meal/">TIME's report on Obama and Bourdain's Hanoi dinner</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="recipe" aria-labelledby="recipe-heading" class="mb-5">
+    <p class="eyebrow mb-2">From Hanoi to your kitchen</p>
+    <h2 class="fw-bold mb-3" id="recipe-heading">Make Bún Chả at home</h2>
+    <p class="text-muted">A home-style version with both pork patties and pork slices. A grill pan works well if you do not have a charcoal grill. Quantities and cooking times are a guide; adjust the sauce to your taste.</p>
+    <dl class="row g-3 border-top border-bottom py-3 my-4">
+      <div class="col-6 col-md-3"><dt class="small text-muted">Serves</dt><dd class="fw-semibold mb-0">4 people</dd></div>
+      <div class="col-6 col-md-3"><dt class="small text-muted">Preparation</dt><dd class="fw-semibold mb-0">About 25 minutes</dd></div>
+      <div class="col-6 col-md-3"><dt class="small text-muted">Marinating</dt><dd class="fw-semibold mb-0">At least 30 minutes</dd></div>
+      <div class="col-6 col-md-3"><dt class="small text-muted">Cooking</dt><dd class="fw-semibold mb-0">About 20 minutes</dd></div>
+    </dl>
+
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-5">
+        <div class="recipe-panel p-4">
+          <h3 class="h4 fw-bold mb-4">Ingredients</h3>
+          <h4 class="h6 fw-bold">Pork &amp; marinade</h4>
+          <ul class="ingredient-list ps-3 mb-4">
+            <li>400 g ground pork</li>
+            <li>300 g pork belly, thinly sliced</li>
+            <li>2 tbsp fish sauce</li>
+            <li>1 tbsp brown sugar</li>
+            <li>2 shallots and 3 garlic cloves, finely minced</li>
+            <li>1 tbsp neutral oil, plus a little for the grill</li>
+            <li>½ tsp ground black pepper</li>
+          </ul>
+          <h4 class="h6 fw-bold">Dipping sauce</h4>
+          <ul class="ingredient-list ps-3 mb-4">
+            <li>300 ml warm water</li>
+            <li>3 tbsp fish sauce</li>
+            <li>2 tbsp sugar</li>
+            <li>2 tbsp lime juice, or more to taste</li>
+            <li>1 garlic clove, minced; sliced chili to taste</li>
+          </ul>
+          <h4 class="h6 fw-bold">Quick pickles</h4>
+          <ul class="ingredient-list ps-3 mb-4">
+            <li>1 small carrot and 150 g peeled green papaya, thinly sliced (or use extra carrot)</li>
+            <li>3 tbsp rice vinegar</li>
+            <li>1 tbsp sugar and ¼ tsp salt</li>
+          </ul>
+          <h4 class="h6 fw-bold">To serve</h4>
+          <ul class="ingredient-list ps-3 mb-0">
+            <li>300 g dried rice vermicelli</li>
+            <li>1 small lettuce, leaves separated</li>
+            <li>1 handful each of mint and coriander</li>
+            <li>Optional: perilla, Thai basil, and lime wedges</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <h3 class="h4 fw-bold mb-4">Step by step</h3>
+        <ol class="recipe-steps">
+          <li>
+            <h4 class="h5 fw-bold">Marinate the pork</h4>
+            <p class="text-muted">Mix the marinade's fish sauce, brown sugar, shallots, garlic, oil, and pepper. Divide between the ground pork and pork belly in separate bowls. Mix well, cover, and refrigerate for at least 30 minutes.</p>
+          </li>
+          <li>
+            <h4 class="h5 fw-bold">Prepare the pickles</h4>
+            <p class="text-muted">Stir the rice vinegar, sugar, and salt together until dissolved. Toss with the sliced carrot and green papaya. Leave for about 20 minutes while you prepare the other ingredients, stirring occasionally, then drain.</p>
+          </li>
+          <li>
+            <h4 class="h5 fw-bold">Mix the dipping sauce</h4>
+            <p class="text-muted">Dissolve the sauce's sugar in the warm water. Add the fish sauce, lime juice, garlic, and chili. Taste and adjust: more water softens the saltiness, lime adds tang, and sugar adds sweetness. Set aside in a clean serving bowl.</p>
+          </li>
+          <li>
+            <h4 class="h5 fw-bold">Cook the noodles &amp; wash the greens</h4>
+            <p class="text-muted">Cook the vermicelli according to its package instructions, rinse with cool water, and drain well. Wash the lettuce and herbs, then arrange them on a serving plate.</p>
+          </li>
+          <li>
+            <h4 class="h5 fw-bold">Shape &amp; grill</h4>
+            <p class="text-muted">Shape the ground pork into small, flat patties about 1 cm thick. Lightly oil a grill or grill pan and heat to medium-high. Cook the patties and pork slices in batches, turning until browned and cooked through, roughly 4–5 minutes per side for the patties. Thickness and heat affect timing: use a food thermometer to check that ground-pork patties reach 71°C (160°F), and whole-cut pork reaches 63°C (145°F) followed by a 3-minute rest. Discard any leftover raw-pork marinade. See <a href="https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart">USDA cooking temperatures</a>.</p>
+          </li>
+          <li>
+            <h4 class="h5 fw-bold">Bring everything to the table</h4>
+            <p class="text-muted mb-0">Divide the dipping sauce among four bowls. Add the drained pickles and cooked pork. Serve straight away with the noodles and greens on the side, so everyone can build each bite.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="serving-heading" class="mb-5">
+    <p class="eyebrow mb-2">The best part</p>
+    <h2 class="fw-bold mb-4" id="serving-heading">How to enjoy Bún Chả</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <span class="step-number" aria-hidden="true">01</span>
+        <h3 class="h5 fw-bold mt-2">Dip a little at a time</h3>
+        <p class="text-muted">Take a small portion of vermicelli and dip it into the sauce with the pork and pickles.</p>
+      </div>
+      <div class="col-md-4">
+        <span class="step-number" aria-hidden="true">02</span>
+        <h3 class="h5 fw-bold mt-2">Add something fresh</h3>
+        <p class="text-muted">Include lettuce and a few herbs with each mouthful for a mix of smoky, soft, and crisp textures.</p>
+      </div>
+      <div class="col-md-4">
+        <span class="step-number" aria-hidden="true">03</span>
+        <h3 class="h5 fw-bold mt-2">Find your balance</h3>
+        <p class="text-muted">Add chili or lime to taste, and enjoy the pork while it is warm from the grill.</p>
+      </div>
+    </div>
+    <p class="small text-muted mb-0">More about the dish: <a href="https://vietnam.travel/things-to-do/famous-hanoi-food-and-international-fine-dining">Vietnam Tourism's guide to Hanoi cuisine</a>.</p>
+  </section>
+
+  <div class="border-top pt-4 d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <p class="mb-0 fw-semibold">Keep exploring the flavors of Vietnam.</p>
+    <a href="index.html#foodGrid" class="btn btn-primary">Explore all dishes</a>
+  </div>
+</main>
+
+<footer class="py-4 text-center mt-auto">
+  <div class="container">
+    <p class="mb-1 fw-bold">Vietnamese Cuisine Project &copy; 2026</p>
+    <small class="text-white-50">Website crafted by Group 5 - HTML5, CSS3, JavaScript & Bootstrap 5</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
