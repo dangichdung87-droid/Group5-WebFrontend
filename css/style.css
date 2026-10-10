@@ -1,0 +1,95 @@
+:root {
+  --primary-color: #c82333;
+  --primary-dark: #9e1321;
+  --secondary-color: #d4a373;
+  --bg-light: #f8f9fa;
+  --text-dark: #2b2b2b;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  background-color: #ffffff;
+  padding-top: 70px;
+}
+
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand {
+  color: var(--primary-color) !important;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #495057 !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
+    url('../images/dungnauan.jpg') center/cover no-repeat;
+  color: #ffffff;
+  padding: 95px 0;
+  border-radius: 0 0 24px 24px;
+}
+
+.food-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  background-color: #ffffff;
+}
+
+.food-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  border-radius: 8px;
+  font-weight: 500;
+  padding: 8px 18px;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.badge-region {
+  background-color: #fef3e2;
+  color: #b25e00;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+
+.member-card {
+  border: none;
+  border-radius: 14px;
+  background-color: var(--bg-light);
+}
+
+.contact-box {
+  background-color: var(--bg-light);
+  border-radius: 16px;
+  padding: 30px;
+}
+
+footer {
+  background-color: #1f2421;
+  color: #d1d5db;
+}
