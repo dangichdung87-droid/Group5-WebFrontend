@@ -50,11 +50,35 @@ body {
 }
 
 .hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
-    url('../images/dungnauan.jpg') center/cover no-repeat;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.52)),
+    url('../images/dungnauan.jpg') center center / cover no-repeat;
   color: #ffffff;
-  padding: 95px 0;
+  padding: clamp(50px, 8vw, 95px) 16px;
   border-radius: 0 0 24px 24px;
+  min-height: clamp(260px, 42vh, 420px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.hero-section h1 {
+  font-size: clamp(1.65rem, 3.5vw + 0.5rem, 2.85rem) !important;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.hero-section .lead {
+  font-size: clamp(0.95rem, 1.2vw + 0.55rem, 1.25rem);
+  line-height: 1.6;
+}
+
+@media (max-width: 767.98px) {
+  .hero-section {
+    background-position: 70% center;
+    border-radius: 0 0 16px 16px;
+  }
 }
 
 .food-card {
@@ -66,6 +90,7 @@ body {
 }
 
 .food-card img {
+  width: 100%;
   height: 200px;
   object-fit: cover;
 }
@@ -125,9 +150,6 @@ footer {
   outline-offset: 4px;
 }
 
-/* ==========================================================================
-   Food Detail Page & Pho Page Styles
-   ========================================================================== */
 .pho-page,
 .dish-page {
   max-width: 1140px;
@@ -251,5 +273,53 @@ footer {
   .dish-page {
     padding-right: 24px;
     padding-left: 24px;
+  }
+}
+
+.banner-section {
+  background: linear-gradient(135deg, #fffaf5 0%, #ffffff 100%);
+  border: 1px solid rgba(212, 163, 115, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.dish-title {
+  font-size: clamp(1.75rem, 3.5vw + 0.5rem, 2.75rem);
+  line-height: 1.25;
+}
+
+.banner-photo {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.banner-photo:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 991.98px) {
+  .toc-card {
+    position: static !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  body {
+    padding-top: 74px;
+  }
+  .navbar-brand {
+    font-size: 1.15rem !important;
+    letter-spacing: 0.5px;
+  }
+  .banner-section .row {
+    padding: 1.5rem 1rem !important;
+  }
+  .banner-photo {
+    max-height: 260px;
   }
 }
