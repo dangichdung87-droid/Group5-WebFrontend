@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pho - Essence of Vietnamese Cuisine</title>
+  <meta name="description" content="Discover Vietnam's national dish - Phở: clear slow-simmered beef bone broth, silky flat rice noodles, and fragrant herbs. Explore its origins, regional styles, and an authentic home recipe.">
+  <title>Phở - Essence of Vietnamese Cuisine</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,7 +13,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3">
     <div class="container px-4">
       <a class="navbar-brand fw-bold" href="index.html">VIETNAMESE CUISINE</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
@@ -31,14 +32,237 @@
     </div>
   </nav>
 
-  <main class="container my-5 flex-grow-1">
-    
+  <main class="container my-5 flex-grow-1 pho-page" id="main-content">
+    <nav aria-label="Breadcrumb" class="mb-4">
+      <ol class="breadcrumb small">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html#foodGrid">Traditional dishes</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Phở</li>
+      </ol>
+    </nav>
+
+    <!-- Header / Hero -->
+    <header class="row align-items-center g-4 g-lg-5 mb-5">
+      <div class="col-lg-5">
+        <span class="badge-region d-inline-block mb-3">Northern Vietnam · Hanoi &amp; Nam Định</span>
+        <h1 class="fw-bold mb-2" lang="vi">Phở</h1>
+        <p class="fs-4 mb-3">The aromatic soul and national pride of Vietnam.</p>
+        <p class="text-muted mb-4">A golden, crystal-clear broth simmered for hours from beef marrow bones, charred ginger, star anise, and cinnamon. Poured piping hot over silky flat rice noodles (<span lang="vi">bánh phở</span>) and tender beef cuts, every bowl offers a delicate yet unforgettable harmony of flavors.</p>
+        <div class="d-flex flex-wrap gap-3 align-items-center">
+          <a class="btn btn-primary" href="#recipe">Try the recipe</a>
+          <a href="#cultural-origins">The cultural story</a>
+          <a href="#regional-styles">North vs South</a>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <figure class="mb-0">
+          <img src="images/pho.jpg" class="hero-photo" width="1200" height="800" fetchpriority="high" alt="A steaming bowl of Vietnamese beef phở with flat rice noodles, sliced beef, chopped scallions, and fresh herbs in clear broth">
+          <figcaption class="small text-muted mt-2">Crystal-clear spiced broth, tender beef, and fresh rice noodles: the timeless essence of Phở.</figcaption>
+        </figure>
+      </div>
+    </header>
+
+    <!-- The Dish at a Glance -->
+    <section aria-labelledby="introduction-heading" class="mb-5">
+      <p class="eyebrow mb-2">The dish at a glance</p>
+      <h2 class="fw-bold mb-3" id="introduction-heading">A Masterpiece of Balance and Patience</h2>
+      <p class="text-muted">Unlike heavily spiced or oily noodle soups, authentic Vietnamese Phở is celebrated worldwide for its pure, nuanced broth and restorative lightness. It requires hours of gentle simmering, precise aromatic charring, and fresh herbal garnishes to achieve its signature harmony.</p>
+      <div class="row g-3 mt-1">
+        <div class="col-md-4">
+          <div class="feature-card p-4 border rounded-3 h-100 bg-white shadow-sm">
+            <h3 class="h5 fw-bold">Slow-Simmered Broth</h3>
+            <p class="text-muted mb-0">Beef marrow bones simmered gently for 6 to 8 hours with charred ginger, shallots, star anise, and cassia cinnamon for absolute clarity and depth.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card p-4 border rounded-3 h-100 bg-white shadow-sm">
+            <h3 class="h5 fw-bold">Silky Rice Noodles</h3>
+            <p class="text-muted mb-0">Fresh, artisanal flat rice noodles (<span lang="vi">bánh phở</span>) blanched just before serving, delivering a soft yet delicate chew that absorbs the savory broth.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card p-4 border rounded-3 h-100 bg-white shadow-sm">
+            <h3 class="h5 fw-bold">Fresh Aromatics</h3>
+            <p class="text-muted mb-0">Crisp scallions, sweet white onion slices, sawtooth herb (<span lang="vi">ngò gai</span>), Thai basil, lime wedges, and bird's eye chilies to brighten every spoonful.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cultural and Historical Story Box -->
+    <section class="story-box rounded-3 p-4 p-lg-5 mb-5" id="cultural-origins" aria-labelledby="origins-heading">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-4">
+          <p class="eyebrow mb-2">Nam Định &amp; Hanoi · Early 20th Century</p>
+          <h2 class="fw-bold mb-0" id="origins-heading">Born on the<br>streets of the North.</h2>
+        </div>
+        <div class="col-lg-8">
+          <p>Phở took shape in northern Vietnam in the late 19th and early 20th centuries, primarily around Nam Định province and Hanoi's bustling Old Quarter. It developed as a creative crossroads where Vietnamese rice noodle craftsmanship met French influences, notably the introduction of beef cuts and slow-simmered bone bouillon (similar to <em>pot-au-feu</em>).</p>
+          <p>In the early days, phở was carried through winding Hanoi alleys by itinerant vendors carrying bamboo shoulder poles known as <strong>gánh phở</strong>. Balanced on one end was a wood-fired brazier holding the steaming broth cauldron, and on the other were noodles, bowls, meats, and spices. Today, Phở is internationally celebrated by culinary critics and honored as part of Vietnam's National Intangible Cultural Heritage.</p>
+          <p class="mb-0 small">Read more about the dish: <a href="https://en.wikipedia.org/wiki/Pho" target="_blank" rel="noopener">Wikipedia – Phở</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Regional Styles -->
+    <section id="regional-styles" aria-labelledby="regions-heading" class="mb-5">
+      <p class="eyebrow mb-2">Regional Traditions</p>
+      <h2 class="fw-bold mb-3" id="regions-heading">Phở Bắc vs. Phở Nam: Two Distinct Traditions</h2>
+      <p class="text-muted">As phở traveled southward in the mid-20th century, regional tastes gave rise to two beloved interpretations, each with its own devoted following.</p>
+      <div class="row g-4 mt-1">
+        <div class="col-md-6">
+          <div class="p-4 border rounded-3 h-100 bg-light">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="h5 fw-bold mb-0">Phở Bắc (Northern Style)</h3>
+              <span class="badge-region-tag">Hanoi Purist</span>
+            </div>
+            <p class="text-muted">Celebrated for its clarity and understated elegance. The broth is clear, delicately seasoned with fish sauce and whole spices, focusing on the pure natural sweetness of beef bones.</p>
+            <ul class="text-muted small ps-3 mb-0">
+              <li>Broth: Clear, subtle, lightly spiced, minimal sweetness.</li>
+              <li>Accompaniments: Pickled garlic vinegar, fresh chili, and crispy fried crullers (<span lang="vi">quẩy</span>).</li>
+              <li>Greens: Focused on scallions and fresh cilantro; rarely served with bean sprouts or sweet bean sauce.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-4 border rounded-3 h-100 bg-light">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="h5 fw-bold mb-0">Phở Nam (Southern Style)</h3>
+              <span class="badge-region-tag">Saigon Vibrant</span>
+            </div>
+            <p class="text-muted">A bolder, sweeter, and more exuberant rendition. The broth is often richer, slightly caramelized with rock sugar, and served with a lavish garden of fresh herbs and condiment sauces.</p>
+            <ul class="text-muted small ps-3 mb-0">
+              <li>Broth: Sweeter, darker, infused with roasted spices and sometimes charred shallots.</li>
+              <li>Accompaniments: Fresh lime wedges, sliced jalapeños or bird's eye chilies, hoisin sauce (<span lang="vi">tương đen</span>), and sriracha.</li>
+              <li>Greens: Piles of crunchy bean sprouts, Thai basil (<span lang="vi">húng quế</span>), and sawtooth herb (<span lang="vi">ngò gai</span>).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recipe Section -->
+    <section id="recipe" aria-labelledby="recipe-heading" class="mb-5">
+      <p class="eyebrow mb-2">From Hanoi to your kitchen</p>
+      <h2 class="fw-bold mb-3" id="recipe-heading">Cook Traditional Beef Phở (Phở Bò) at Home</h2>
+      <p class="text-muted">A master recipe for authentic Northern-style Phở Bò. The secret lies in blanching the bones thoroughly and simmering at a gentle roll without boiling rapidly, ensuring crystal broth clarity.</p>
+
+      <dl class="row g-3 border-top border-bottom py-3 my-4">
+        <div class="col-6 col-md-3"><dt class="small text-muted">Serves</dt><dd class="fw-semibold mb-0">4–6 people</dd></div>
+        <div class="col-6 col-md-3"><dt class="small text-muted">Preparation</dt><dd class="fw-semibold mb-0">About 30 minutes</dd></div>
+        <div class="col-6 col-md-3"><dt class="small text-muted">Simmering</dt><dd class="fw-semibold mb-0">6 to 8 hours</dd></div>
+        <div class="col-6 col-md-3"><dt class="small text-muted">Assembly</dt><dd class="fw-semibold mb-0">About 15 minutes</dd></div>
+      </dl>
+
+      <div class="row g-4 g-lg-5">
+        <div class="col-lg-5">
+          <div class="recipe-panel p-4">
+            <h3 class="h4 fw-bold mb-4">Ingredients</h3>
+
+            <h4 class="h6 fw-bold">Broth &amp; Bones</h4>
+            <ul class="ingredient-list ps-3 mb-4">
+              <li>1.5 kg beef marrow bones and knuckle bones</li>
+              <li>500 g beef brisket or flank (for cooked beef slices)</li>
+              <li>4.5 litres fresh water</li>
+              <li>3 tbsp premium fish sauce (nước mắm)</li>
+              <li>25 g yellow rock sugar (đường phèn)</li>
+              <li>1 tbsp sea salt</li>
+            </ul>
+
+            <h4 class="h6 fw-bold">Charred Aromatics &amp; Spices</h4>
+            <ul class="ingredient-list ps-3 mb-4">
+              <li>1 large ginger hand (approx. 80 g), unpeeled</li>
+              <li>4 large shallots, unpeeled</li>
+              <li>1 medium yellow onion, halved</li>
+              <li>5 whole star anise pods</li>
+              <li>1 cinnamon stick (cassia bark)</li>
+              <li>1 black cardamom pod (thảo quả), lightly cracked</li>
+              <li>3 cloves &amp; 1 tsp coriander seeds</li>
+            </ul>
+
+            <h4 class="h6 fw-bold">Noodles &amp; Beef Cuts</h4>
+            <ul class="ingredient-list ps-3 mb-4">
+              <li>500 g fresh flat rice noodles (<span lang="vi">bánh phở</span>)</li>
+              <li>250 g beef tenderloin or eye of round, paper-thinly sliced (for rare beef - <span lang="vi">phở tái</span>)</li>
+            </ul>
+
+            <h4 class="h6 fw-bold">Garnishes &amp; Table Serving</h4>
+            <ul class="ingredient-list ps-3 mb-0">
+              <li>1 small white onion, shaved paper-thin and soaked in ice water</li>
+              <li>1 bunch scallions (green onions), finely chopped</li>
+              <li>1 bunch fresh cilantro &amp; culantro (<span lang="vi">ngò gai</span>)</li>
+              <li>Fresh lime wedges &amp; bird's eye chili slices</li>
+              <li>Pickled garlic vinegar or chili sauce to taste</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <h3 class="h4 fw-bold mb-4">Step by step</h3>
+          <ol class="recipe-steps">
+            <li>
+              <h4 class="h5 fw-bold">Parboil and wash the beef bones</h4>
+              <p class="text-muted">Place the beef bones into a large stockpot and submerge under cold water. Bring to a vigorous rolling boil for 8–10 minutes to release coagulated proteins and impurities. Drain completely, then rinse each bone thoroughly under warm running water. Scrub the pot clean before continuing.</p>
+            </li>
+            <li>
+              <h4 class="h5 fw-bold">Char the aromatics &amp; toast the spices</h4>
+              <p class="text-muted">Char the ginger, shallots, and onion halves directly over an open flame or in a dry cast-iron skillet until blackened spots appear. Peel off the loose charred skins and rinse lightly. In a dry pan over medium-low heat, gently toast the star anise, cinnamon stick, black cardamom, cloves, and coriander seeds for 2–3 minutes until deeply fragrant. Place spices into a spice bag or cheesecloth pouch.</p>
+            </li>
+            <li>
+              <h4 class="h5 fw-bold">Slow-simmer the golden broth</h4>
+              <p class="text-muted">Return the cleaned bones and the beef brisket to the pot with 4.5 litres of fresh water. Bring to a gentle boil, then immediately turn the heat to the lowest setting for a bare simmer. Add the charred ginger, shallots, rock sugar, and salt. Cook uncovered for 6 to 8 hours, frequently skimming any foam from the surface. Add the spice bag during the final 90 minutes of simmering so the spices remain fragrant without overpowering the stock.</p>
+            </li>
+            <li>
+              <h4 class="h5 fw-bold">Rest the cooked meat and strain broth</h4>
+              <p class="text-muted">Remove the cooked beef brisket once tender (after about 2–2.5 hours), submerge in cold water for 5 minutes to prevent darkening, and slice thinly. When broth simmering is complete, discard the bones and aromatics. Strain the broth through a fine-mesh sieve lined with cheesecloth. Season to taste with fish sauce and salt.</p>
+            </li>
+            <li>
+              <h4 class="h5 fw-bold">Warm bowls &amp; blanch the rice noodles</h4>
+              <p class="text-muted">Bring a separate pot of water to a boil. Blanch the fresh bánh phở noodles for 15–20 seconds using a noodle strainer basket. Shake off excess water and divide immediately into warmed deep serving bowls.</p>
+            </li>
+            <li>
+              <h4 class="h5 fw-bold">Assemble and ladle piping hot</h4>
+              <p class="text-muted mb-0">Arrange the cooked brisket slices and paper-thin raw beef slices over the noodles. Scatter chopped scallions, shaved white onion, and cilantro across the top. Bring the broth to a vigorous rolling boil, then ladle directly over the raw beef to flash-cook it to tender pink perfection. Serve immediately with fresh limes and chilies.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Enjoy Section -->
+    <section aria-labelledby="serving-heading" class="mb-5" id="how-to-enjoy">
+      <p class="eyebrow mb-2">The tasting ritual</p>
+      <h2 class="fw-bold mb-4" id="serving-heading">How to Savour Every Drop of Phở</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <span class="step-number" aria-hidden="true">01</span>
+          <h3 class="h5 fw-bold mt-2">Sip the pure broth first</h3>
+          <p class="text-muted">Before adding sauces or squeezing lime, take a spoonful of broth to appreciate the pure, multifaceted depth achieved from bone marrow and roasted spices.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="step-number" aria-hidden="true">02</span>
+          <h3 class="h5 fw-bold mt-2">Gently layer aromatics</h3>
+          <p class="text-muted">Squeeze a fresh lime wedge and tear fresh herbs (ngò gai, Thai basil) with your fingers to release essential oils into the steaming bowl.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="step-number" aria-hidden="true">03</span>
+          <h3 class="h5 fw-bold mt-2">Dip rather than drown</h3>
+          <p class="text-muted">Place hoisin or chili sauce in a small dipping dish on the side. Dip pieces of tender beef into the sauce rather than altering the color and purity of the artisan broth.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation -->
+    <div class="border-top pt-4 d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <p class="mb-0 fw-semibold">Keep exploring the flavors of Vietnam.</p>
+      <a href="index.html#foodGrid" class="btn btn-primary">Explore all dishes</a>
+    </div>
   </main>
 
   <footer class="py-4 text-center mt-auto">
     <div class="container">
       <p class="mb-1 fw-bold">Vietnamese Cuisine Project &copy; 2026</p>
-      <small class="text-white-50">Website crafted by Group 5 - HTML5, CSS3, JavaScript & Bootstrap 5</small>
+      <small class="text-white-50">Website crafted by Group 5 - HTML5, CSS3, JavaScript &amp; Bootstrap 5</small>
     </div>
   </footer>
 
