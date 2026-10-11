@@ -108,3 +108,19 @@ footer {
   background-color: #1f2421;
   color: #d1d5db;
 }
+
+.breadcrumb a {
+  color: var(--primary-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-color);
+}
+
+.breadcrumb a:focus-visible {
+  outline: 3px solid var(--primary-dark);
+  outline-offset: 4px;
+}
