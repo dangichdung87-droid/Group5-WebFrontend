@@ -123,4 +123,133 @@ footer {
 .breadcrumb a:focus-visible {
   outline: 3px solid var(--primary-dark);
   outline-offset: 4px;
+}
+
+/* ==========================================================================
+   Food Detail Page & Pho Page Styles
+   ========================================================================== */
+.pho-page,
+.dish-page {
+  max-width: 1140px;
+}
+
+.pho-page [id],
+.dish-page [id] {
+  scroll-margin-top: 110px;
+}
+
+.pho-page .eyebrow,
+.dish-page .eyebrow {
+  color: var(--primary-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pho-page h1,
+.dish-page h1 {
+  font-size: clamp(3rem, 7vw, 5rem);
+  letter-spacing: -0.04em;
+}
+
+.pho-page h2,
+.dish-page h2 {
+  letter-spacing: -0.025em;
+}
+
+.pho-page .hero-photo,
+.dish-page .hero-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.pho-page .hero-photo:hover,
+.dish-page .hero-photo:hover {
+  transform: scale(1.01);
+}
+
+.pho-page .story-box,
+.dish-page .story-box {
+  background: #fef3e2;
+  border-left: 4px solid var(--secondary-color);
+}
+
+.pho-page .recipe-panel,
+.dish-page .recipe-panel {
+  background: var(--bg-light);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.pho-page .ingredient-list li,
+.dish-page .ingredient-list li {
+  margin-bottom: 0.5rem;
+}
+
+.pho-page .recipe-steps,
+.dish-page .recipe-steps {
+  padding-left: 1.5rem;
+}
+
+.pho-page .recipe-steps > li,
+.dish-page .recipe-steps > li {
+  padding-left: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.pho-page .recipe-steps > li::marker,
+.dish-page .recipe-steps > li::marker {
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.pho-page .step-number,
+.dish-page .step-number {
+  color: var(--primary-dark);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.pho-page a:not(.btn),
+.dish-page a:not(.btn) {
+  color: var(--primary-dark);
+  text-underline-offset: 3px;
+}
+
+.pho-page a:focus-visible,
+.dish-page a:focus-visible {
+  outline: 3px solid var(--primary-dark);
+  outline-offset: 4px;
+}
+
+.pho-page .feature-card,
+.dish-page .feature-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pho-page .feature-card:hover,
+.dish-page .feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+}
+
+.pho-page .badge-region-tag {
+  background-color: #fef3e2;
+  color: #b25e00;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+@media (max-width: 575.98px) {
+  .pho-page,
+  .dish-page {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
 }
