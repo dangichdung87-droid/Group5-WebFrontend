@@ -9,6 +9,12 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 105px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+  overscroll-behavior-x: none;
+  touch-action: pan-y;
 }
 
 [id] {
@@ -20,6 +26,18 @@ body {
   color: var(--text-dark);
   background-color: #ffffff;
   padding-top: 85px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+  overscroll-behavior-x: none;
+  touch-action: pan-y;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .navbar {
@@ -186,12 +204,6 @@ footer {
   height: auto;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-}
-
-.pho-page .hero-photo:hover,
-.dish-page .hero-photo:hover {
-  transform: scale(1.01);
 }
 
 .pho-page .story-box,
@@ -295,11 +307,6 @@ footer {
   object-position: center;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-}
-
-.banner-photo:hover {
-  transform: scale(1.02);
 }
 
 @media (max-width: 991.98px) {

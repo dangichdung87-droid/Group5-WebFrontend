@@ -29,3 +29,30 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+// Ngăn chặn thao tác chạm 2 ngón tay kéo sang ngang (Touchpad/Trackpad horizontal swipe) làm trang web bị xê dịch
+window.addEventListener(
+  'wheel',
+  function (e) {
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+      let target = e.target;
+      let hasHorizontalScroll = false;
+      while (target && target !== document.body && target !== document.documentElement) {
+        const overflowX = window.getComputedStyle(target).overflowX;
+        if (
+          (overflowX === 'auto' || overflowX === 'scroll') &&
+          target.scrollWidth > target.clientWidth
+        ) {
+          hasHorizontalScroll = true;
+          break;
+        }
+        target = target.parentElement;
+      }
+
+      if (!hasHorizontalScroll) {
+        e.preventDefault();
+      }
+    }
+  },
+  { passive: false }
+);
